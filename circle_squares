@@ -1,22 +1,6 @@
 import turtle
 from turtle import *
 import math
-def square(l,dire,n):
-    speed(0)
-    ang=range(dire,(dire+360),n)
-    up()
-    setpos(200,0)
-    down()
-    for angl in ang:
-        seth(angl)
-        for rep in range(6):
-          fd(l)
-          lt(90) 
-square(50,0,20)
-done()
-import turtle
-from turtle import *
-import math
 hideturtle()
 def draw_square(x,y,legth,dire,color):
     speed(0)
