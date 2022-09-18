@@ -7,11 +7,40 @@ def square(l,ang,x,y):
     setpos(x,y)
     for rep in range(4):
         fd(l)
-        lt(90)
+        lt(90) 
+def circlepoints(r):
+    speed(0)
+    angles=range(0,361,1)
+    x=r
+    y=0
+    for teta in angles:
+        penup()
+        goto(x,y)
+        pendown()
+        circle(1)
+        print(teta,x,y)
+        x=r-teta
+        if x==-50:
+            x=r
+        y=math.sqrt((r*r)-(x*x))   
+        # if teta<180 and teta>0:
+        #    x = x=x-1
+        # #    y= 0 + (r*teta/90)
+        # elif teta==90:
+        #     x=0
+        # elif teta<=180 and teta>90:
+        #    x  r - (r*teta/180)
+        #    y= 0 - (r*teta/180)
+        # if teta<=270 and teta>180:
+        #    x = r - (r*teta/90)
+        #    y= 0 + (r*teta/90)
+circlepoints(50)
 angs=range(0,361,10)
 x,y=0,0
-for angl in angs:
-    x , y = x + 1, y + 1    
-    print(angl)
-    square(50,angl,x,y)
+# for angl in angs:
+#     x , y = x + 1, y + 1    
+#     print(angl)
+#     square(50,angl,x,y)
+
+
 done()
