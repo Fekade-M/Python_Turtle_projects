@@ -1,0 +1,13 @@
+import turtle
+from turtle import *
+import math
+def square(l,ang):
+    seth(ang)
+    for rep in range(4):
+        fd(l)
+        lt(90)
+angs=range(0,361,10)
+for angl in angs:
+    print(angl)
+    square(50,angl)
+done()
