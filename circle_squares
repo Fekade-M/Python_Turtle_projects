@@ -1,13 +1,17 @@
 import turtle
 from turtle import *
 import math
-def square(l,ang):
+def square(l,ang,x,y):
+    speed(0)
     seth(ang)
+    setpos(x,y)
     for rep in range(4):
         fd(l)
         lt(90)
 angs=range(0,361,10)
+x,y=0,0
 for angl in angs:
+    x , y = x + 1, y + 1    
     print(angl)
-    square(50,angl)
+    square(50,angl,x,y)
 done()
