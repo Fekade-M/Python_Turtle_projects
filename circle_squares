@@ -1,10 +1,9 @@
 import turtle
 from turtle import *
 import math
-def square(l):
+def square(l,dire,n):
     speed(0)
-    ang=range(45,406,20)
-    seth(90)
+    ang=range(dire,(dire+360),n)
     up()
     setpos(200,0)
     down()
@@ -13,7 +12,27 @@ def square(l):
         for rep in range(6):
           fd(l)
           lt(90) 
-square(50)
+square(50,0,20)
 done()
-hftyduyjhvhj
-kgh
+import turtle
+from turtle import *
+import math
+hideturtle()
+def draw_square(x,y,legth,dire,color):
+    speed(0)
+    up()
+    goto((x+(legth/2)),(y+(legth/2)))
+    # turtle.goto(x-length/(2**0.5)*math.cos(math.radians(direction+45)),y-length/(2**0.5)*math.sin(math.radians(direction+45)))
+    # print(heading())
+    seth((dire+45))
+    down()
+
+    for _ in range(4):
+        # print(heading())
+        left(90)
+        fd(legth)
+    # print(heading())     
+dire=0
+draw_square(0,0,50,dire,'red')
+done()
+# def draw_square_circle(rad,direction,n):
