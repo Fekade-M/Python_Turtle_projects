@@ -3,7 +3,7 @@ from turtle import *
 import math
 def square(l):
     speed(0)
-    ang=range(45,406,20)
+    ang=range(45,405,20)
     seth(90)
     up()
     setpos(200,0)
